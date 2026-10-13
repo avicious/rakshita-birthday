@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: #f7b1b0;
+      }
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100dvh;
+        padding: 0 2rem;
+      }
+      .heading-playful {
+        font-family: "Pacifico", cursive;
+        font-size: 3.5rem;
+        color: #99582a;
+        text-shadow: 2px 2px 0px #6f1d1b;
+        text-align: center;
+      }
+      .image {
+        width: 400px;
+        align-self: center;
+      }
+    </style>
+    <title>Happy Birthday Rakshita</title>
+  </head>
+  <body>
+    <div>
+      <h1 class="heading-playful">
+        Happy <br />
+        Birthday <br />
+        Rakshita
+      </h1>
+      <img class="image" src="/birthday.png" alt="birthday" />
+    </div>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/@hiseb/confetti@2.2.0/dist/confetti.min.js"></script>
+  <script>
+  let burstsFired = 0;
+  const totalBursts = 5;
+  const delayMs = 1500;
+
+  const interval = setInterval(() => {
+    confetti({
+      count: 100,
+      size: 1,
+      velocity: 200,
+      fade: true,
+    });
+
+    burstsFired++;
+    
+    if (burstsFired >= totalBursts) {
+      clearInterval(interval);
+    }
+  }, delayMs);
+</script>
+</html>
